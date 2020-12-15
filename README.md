@@ -10,7 +10,7 @@ This program utilizes a parser and is best run from the command line with the fo
 > python (script) (blast type) (fasta file location) (database) (desired e-value)
 
 
-Here is a visual example from the command prompt:
+
 
  
 script - This is the .py file of this blast search script
@@ -28,14 +28,14 @@ nr	- Non-redundant	Protein
 refseq_rna	- NCBI Transcript Reference Sequences	DNA
 refseq_protein -	NCBI Protein Reference Sequences	Protein
 swissprot	- Non-redundant UniProtKB/SwissProt sequences	Protein
-pdbaa	PDB - protein database	Protein
-pdbnt	PDB - nucleotide database	DNA
+pdbaa - protein database	Protein
+pdbnt	- nucleotide database	DNA
 
 fasta file location - the path to the fasta file you wish to blast.
 
 desired e-value - a floating point value to serve as a quality filter. The smaller the value, the more constrained your results will be with respect to quality.
 
-so, for example, after maneuvering to the appropriate working directory containing the fasta file and the python script, from the command line:
+so, for example, after maneuvering to the appropriate working directory containing the example fasta file and the python script, from the command line:
 > python AJH_BLASTSearch.py blastn testfasta3.fasta nt 0.04
 
 
