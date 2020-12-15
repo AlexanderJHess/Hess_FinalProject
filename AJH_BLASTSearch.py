@@ -14,9 +14,14 @@ parser.add_argument('blasttype', type=str,help='blastn, blastp, blastx, tblastn,
 #second parser argument defines the fasta file you wish to perform a blast search on
 parser.add_argument('fastafile',type=str)
 
-#third argument, the e-value cutoff 
+#third parser argument defines the BLAST database at NCBI to use
+parser.add_argument('database',type=str)
+
+#fourth argument, the e-value cutoff 
 parser.add_argument('evalue',type=float)
 args=parser.parse_args()
+
+
 
 
 # In[ ]:
@@ -39,7 +44,7 @@ from Bio import SeqIO
 fastafile=open(args.fastafile)
 
 #run blast search on sequences provided in our fasta file. This search can be a blastn, blastp, blastx, tblastn, tblastx
-result_handle=NCBIWWW.qblast(args.blasttype,'nt',fastafile.read())
+result_handle=NCBIWWW.qblast(args.blasttype,args.database,fastafile.read())
 
 
 # In[ ]:
