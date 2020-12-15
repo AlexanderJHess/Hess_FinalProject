@@ -40,5 +40,6 @@ so, for example, after maneuvering to the appropriate working directory containi
 
 
 Results
+
 After providing necessary inputs (and assuming an internet connection), the script will perform a blast search and save the results to a file called results.xml in your working directory for posterity. It will then parse the results file and display trimmed results based on your inputted e-value. The trimmed results will display the accession numbers of each file and the identification, organized by each fasta sequence inputted. 
  
